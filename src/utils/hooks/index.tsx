@@ -1,39 +1,23 @@
 import { useState, useEffect } from 'react';
-
-interface Housing {
-    "id": string,
-    "title": string,
-    "cover": string,
-    "pictures": string[],
-    "description": string,
-    "host": {
-        "name": string,
-        "picture": string
-    },
-    "rating": string | number,
-    "location": string,
-    "equipments": string[],
-    "tags": string[]
-};
-
-interface ApiResponse {
-    housings?: Housing[],
-    error?: Array<{message: string}> | unknown,
-    loading: boolean
-};
-
+import { ApiResponse, Housing } from '../../types';
 
 export const useFetchHousing: Function = (): ApiResponse => {
     const [housings, setHousings] = useState<ApiResponse["housings"] | []>([]);
     const [loading, setLoading] = useState<ApiResponse["loading"]>(false);
     const [error, setError] = useState<ApiResponse["error"]>(null);
 
-    useEffect(() => {
-        (async () => {
+    useEffect((): void => {
+        (async (): Promise<void> => {
             try {
                 setLoading(true);
-                const response: Response = await fetch("https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P9+React+1/logements.json");
-                const data = await response.json();
+                const response: Response = await fetch("./logements.json", {
+                    headers : { 
+                      'Content-Type': 'application/json',
+                      'Accept': 'application/json'
+                     }
+            
+                  });
+                const data: Housing[] = await response.json();
                 setHousings(data);
             }
     
