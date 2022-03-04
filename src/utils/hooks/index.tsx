@@ -1,23 +1,23 @@
 import { useState, useEffect } from 'react';
-import { ApiResponse } from '../../types';
+import { ApiResponse, Housing } from '../../types';
 
 export const useFetchHousing: Function = (): ApiResponse => {
     const [housings, setHousings] = useState<ApiResponse["housings"] | []>([]);
     const [loading, setLoading] = useState<ApiResponse["loading"]>(false);
     const [error, setError] = useState<ApiResponse["error"]>(null);
 
-    useEffect(() => {
-        (async () => {
+    useEffect((): void => {
+        (async (): Promise<void> => {
             try {
                 setLoading(true);
-                const response: Response = await fetch("./api/logements.json", {
+                const response: Response = await fetch("./logements.json", {
                     headers : { 
                       'Content-Type': 'application/json',
                       'Accept': 'application/json'
                      }
             
                   });
-                const data = await response.json();
+                const data: Housing[] = await response.json();
                 setHousings(data);
             }
     
