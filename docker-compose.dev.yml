@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: kasa-dev
+    image: kasa-dev
+    build:
+      context: .
+      target: development
+    volumes:
+      - ./src:/workflow/kasa/src
+    ports:
+      - 3000:3000
