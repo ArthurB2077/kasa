@@ -1,0 +1,13 @@
+@import '../abstracts/variables';
+
+.logo-red {
+    path {
+        fill: $primary-color;
+    }
+};
+
+.logo-white {
+    path {
+        fill: $secondary-color;
+    }
+};
