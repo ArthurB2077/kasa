@@ -2,13 +2,13 @@ version: "3.8"
 
 services:
   kasa-app:
-    container_name: kasa-dev
-    image: kasa-dev
+    container_name: kasa-app
+    image: kasa-app
     build:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - ".:/workflow/kasa-app"
+      - ".:/usr/src/kasa-app"
     ports:
       - 3000:3000
     environment:
