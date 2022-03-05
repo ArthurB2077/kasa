@@ -1,0 +1,22 @@
+@import '../abstracts/variables';
+
+.footer {
+    background-color: $fourth-bg-color;
+    display: flex;
+    flex-direction: column;
+    padding: 4vw 5vw 2vw 5vw;
+    svg {
+        margin: auto;
+        width: $logo-xs-width;
+        height: $logo-xs-height;
+    };
+    h5 {
+        color: $secondary-color;
+        margin: 2vw auto auto auto;
+        font-weight: $font-weight-lg;
+        font-size: $font-size-md;
+        @media (max-width: 600px) {
+            font-size: $font-size-xxs;
+        };
+    };
+};
