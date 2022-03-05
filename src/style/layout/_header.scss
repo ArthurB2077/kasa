@@ -1,0 +1,36 @@
+@import '../abstracts/variables';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    h1 {
+        svg {
+            width: $logo-width;
+            height: $logo-height;
+            @media (max-width: 600px) {
+                width: $logo-sm-width;
+                height: $logo-sm-height;
+            }
+        }
+    }
+    .navigation {
+        margin: auto 0 auto 0;
+        height: fit-content;
+        :first-child {
+            margin-right: 3vw;     
+        };
+        .nav-link {
+            color: $primary-color;
+            font-size: $font-size-md;
+            font-weight: $font-weight-lg;
+            text-decoration: none;
+            @media (max-width: 600px) {
+                font-size: $font-size-xxs;
+            };
+        };
+        .active {
+            text-decoration: inherit;
+            border-bottom: 1px solid 
+        };
+    };
+};

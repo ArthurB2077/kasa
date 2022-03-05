@@ -1,1 +1,45 @@
-/*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  margin: 4vh 10vw 0 10vw;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.header h1 svg {
+  width: 210px;
+  height: 70px;
+}
+@media (max-width: 600px) {
+  .header h1 svg {
+    width: 150px;
+    height: 45px;
+  }
+}
+.header .navigation {
+  margin: auto 0 auto 0;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.header .navigation :first-child {
+  margin-right: 3vw;
+}
+.header .navigation .nav-link {
+  color: #FF6060;
+  font-size: 24px;
+  font-weight: 500;
+  text-decoration: none;
+}
+@media (max-width: 600px) {
+  .header .navigation .nav-link {
+    font-size: 12px;
+  }
+}
+.header .navigation .active {
+  text-decoration: inherit;
+  border-bottom: 1px solid;
+}/*# sourceMappingURL=main.css.map */
