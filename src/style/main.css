@@ -44,6 +44,25 @@ body {
   border-bottom: 1px solid;
 }
 
+.banner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner-container .banner-title {
+  position: absolute;
+  z-index: 3;
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 48px;
+}
+.banner-container .banner-image {
+  width: 100%;
+  border-radius: 25px;
+  z-index: 1;
+  filter: brightness(60%);
+}
+
 .footer {
   background-color: #000000;
   display: flex;

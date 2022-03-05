@@ -1,9 +1,8 @@
-import React, { FunctionComponent } from "react";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router";
 import text from "./../../../assets/text";
 
-const Header: FunctionComponent = (): JSX.Element => {
+const Header = (): JSX.Element => {
     const { pathname } = useLocation();
 
     return (

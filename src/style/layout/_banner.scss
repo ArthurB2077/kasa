@@ -1,0 +1,21 @@
+@import '../abstracts/variables';
+
+.banner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .banner-title {
+        position: absolute;
+        z-index: 3;
+        color: $secondary-color;
+        font-weight: $font-weight-lg;
+        font-size: $font-size-xl;
+    };
+
+    .banner-image {
+        width: 100%;
+        border-radius: 25px;
+        z-index: 1;
+        filter: brightness(60%);
+    };
+};

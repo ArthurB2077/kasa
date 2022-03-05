@@ -1,7 +1,6 @@
-import React, { FunctionComponent } from "react";
 import text from "./../../../assets/text";
 
-const Footer: FunctionComponent = (): JSX.Element => {
+const Footer = (): JSX.Element => {
 
     return(
         <footer className="footer">

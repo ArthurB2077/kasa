@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ApiResponse, Housing } from '../../types';
 
-export const useFetchHousing: Function = (): ApiResponse => {
+export const useFetchHousing = (): ApiResponse => {
     const [housings, setHousings] = useState<ApiResponse["housings"] | []>([]);
     const [loading, setLoading] = useState<ApiResponse["loading"]>(false);
     const [error, setError] = useState<ApiResponse["error"]>(null);
