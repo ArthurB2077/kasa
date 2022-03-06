@@ -2,22 +2,18 @@ import React, { createContext } from 'react';
 import { useFetchHousing } from '../hooks';
 import { ApiResponse } from '../../types';
 
-export const HousingContext = createContext<ApiResponse["housings"] | []>([]);
+export const HousingContext = createContext<ApiResponse | null>(null);
 
 interface Props {
     children : React.ReactNode
 };
 
 export const HousingProvider = ({ children }: Props ): JSX.Element => {
-    const {housings, loading }: ApiResponse = useFetchHousing();
+    const lodgingsResponse: ApiResponse = useFetchHousing();
 
     return(
-        <>
-            {!loading &&
-                <HousingContext.Provider value={housings}>
-                    {children}
-                </HousingContext.Provider>
-            }
-        </>
+        <HousingContext.Provider value={lodgingsResponse}>
+            {children}
+        </HousingContext.Provider>
     );
 }; 
