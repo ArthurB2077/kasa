@@ -19,6 +19,12 @@ body {
     height: 45px;
   }
 }
+@media (max-width: 360px) {
+  .header h1 svg {
+    width: 120px;
+    height: 40px;
+  }
+}
 .header .navigation {
   margin: auto 0 auto 0;
   height: -webkit-fit-content;
@@ -48,6 +54,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 3vh;
 }
 .banner-container .banner-title {
   position: absolute;
@@ -56,11 +63,41 @@ body {
   font-weight: 500;
   font-size: 48px;
 }
+@media (max-width: 1200px) {
+  .banner-container .banner-title {
+    font-size: 24px;
+  }
+}
+@media (max-width: 700px) {
+  .banner-container .banner-title {
+    overflow-wrap: break-word;
+    width: 60%;
+    text-align: start;
+    -webkit-text-orientation: upright;
+            text-orientation: upright;
+  }
+}
+@media (max-width: 370px) {
+  .banner-container .banner-title {
+    font-size: 14px;
+  }
+}
 .banner-container .banner-image {
   width: 100%;
   border-radius: 25px;
   z-index: 1;
   filter: brightness(60%);
+}
+@media (max-width: 700px) {
+  .banner-container .banner-image {
+    height: 110px;
+    border-radius: 10px;
+  }
+}
+@media (max-width: 370px) {
+  .banner-container .banner-image {
+    height: 10vh;
+  }
 }
 
 .footer {
@@ -84,6 +121,73 @@ body {
   .footer h5 {
     font-size: 12px;
   }
+}
+
+.card-container {
+  width: 90%;
+  background-color: #F6F6F6;
+  border-radius: 25px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 50px 50px;
+  padding: 5%;
+  margin-top: 5vh;
+}
+@media (max-width: 1500px) {
+  .card-container {
+    grid-template-columns: auto auto;
+  }
+}
+@media (max-width: 1000px) {
+  .card-container {
+    grid-template-columns: auto;
+    padding: inherit;
+    background-color: inherit;
+    gap: 50px 0;
+    width: 100%;
+  }
+}
+
+.card {
+  background-color: #FF6060;
+  height: 40vh;
+  border-radius: 10px;
+  position: relative;
+}
+@media (max-width: 1000px) {
+  .card {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .card {
+    height: 25vh;
+  }
+}
+.card .card-title {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  font-weight: 500;
+  font-size: 18px;
+  color: #FFFFFF;
+  z-index: 10;
+  margin: 0;
+}
+.card .card-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+.card .card-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
 }
 
 .logo-red path {

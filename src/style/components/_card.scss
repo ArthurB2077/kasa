@@ -1,0 +1,38 @@
+.card {
+    background-color: $primary-color;
+    height: $card-height-lg;
+    border-radius: $border-radius-sm;
+    position: relative;
+    @media (max-width: 1000px) {
+        width: 100%;
+    };
+    @media (max-width: 500px) {
+        height: $card-height-sm;
+    };
+    .card-title {
+        position:absolute;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        font-weight: $font-weight-lg;
+        font-size: $font-size-sm;
+        color: $secondary-color;
+        z-index: 10;
+        margin: 0;
+    };
+
+    .card-layer {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: $border-radius-sm;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    }
+
+    .card-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: $border-radius-sm;
+    };
+}
