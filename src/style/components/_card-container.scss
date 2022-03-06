@@ -1,0 +1,20 @@
+.card-container {
+    width: 90%;
+    background-color: $secondary-bg-color;
+    border-radius: $border-radius-lg;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: $grid-gap;
+    padding: 5%;
+    margin-top: $space-between-components;
+    @media (max-width: 1500px) {
+        grid-template-columns: auto auto;
+    };
+    @media (max-width: 1000px) {
+        grid-template-columns: auto;
+        padding: inherit;
+        background-color: inherit;
+        gap: 50px 0;
+        width: 100%;
+    };
+};

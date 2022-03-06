@@ -11,6 +11,10 @@
                 width: $logo-sm-width;
                 height: $logo-sm-height;
             }
+            @media (max-width: 360px) {
+                width: $logo-xs-width;
+                height: $logo-xs-height;
+            }
         }
     }
     .navigation {
