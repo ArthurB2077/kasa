@@ -9,7 +9,7 @@ const CardContainer = (): JSX.Element => {
     return(
         <main className="card-container">
             {lodgings && lodgings.length !== 0 &&
-                lodgings.map(ldg => <Card title={ldg.title} image={ldg.cover} key={ldg.id}/>)
+                lodgings.map(ldg => <Card id={ldg.id} title={ldg.title} image={ldg.cover} key={ldg.id}/>)
             }
         </main>
     );
