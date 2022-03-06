@@ -1,0 +1,61 @@
+.gallery {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    @media (max-width: 700px) {
+        height: 25vh;
+    };
+    @media (max-width: 700px) {
+        height: 20vh;
+    };
+    .gallery-icon-container {
+        position: absolute;
+        top: 40%;
+        bottom: 40%;
+        left: 2.5%;
+        height: 20%;
+        display: flex;
+        align-items: center;
+        &__next {
+            right: 2.5%;
+            left: inherit;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+        .gallery-next-icon {
+            width: $gallery-icon-width-md;
+            height: $gallery-icon-height-md;
+            transform: rotate(180deg);
+            @media (max-width: 700px) {
+                border-radius: $border-radius-sm;
+                width: $gallery-icon-width-sm;
+                height: $gallery-icon-height-sm;
+            };
+            path {
+                fill: $secondary-color;
+            };
+        };
+        .gallery-prev-icon {
+            width: $gallery-icon-width-md;
+            height: $gallery-icon-height-md;
+            @media (max-width: 700px) {
+                border-radius: $border-radius-sm;
+                width: $gallery-icon-width-sm;
+                height: $gallery-icon-height-sm;
+            };
+            path {
+                fill: $secondary-color;
+            };
+        };
+    };
+    .gallery-image {
+        width: 100%;
+        height: 100%;
+        object-fit:cover;
+        border-radius: $border-radius-lg;
+        @media (max-width: 700px) {
+            border-radius: $border-radius-sm;
+        };
+    };
+};

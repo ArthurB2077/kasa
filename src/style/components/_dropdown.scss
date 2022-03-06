@@ -36,6 +36,7 @@
             .dropdown-arrow {
                 width: $dropdown-icon-width-md;
                 height: $dropdown-icon-height-md;
+                transform: rotate(180deg);
                 @media (max-width: 600px) {
                     width: $dropdown-icon-width-xs;
                     height: $dropdown-icon-height-xs;
@@ -44,6 +45,9 @@
                     fill: $secondary-color;
                 }
             };
+            .close-arrow {
+                transform: inherit;
+            }
         };
     };
     .dropdown-content {

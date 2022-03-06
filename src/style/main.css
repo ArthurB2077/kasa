@@ -386,6 +386,7 @@ body {
 .dropdown .dropdown-header .dropdown-arrow-container .dropdown-arrow {
   width: 25px;
   height: 15px;
+  transform: rotate(180deg);
 }
 @media (max-width: 600px) {
   .dropdown .dropdown-header .dropdown-arrow-container .dropdown-arrow {
@@ -395,6 +396,9 @@ body {
 }
 .dropdown .dropdown-header .dropdown-arrow-container .dropdown-arrow path {
   fill: #FFFFFF;
+}
+.dropdown .dropdown-header .dropdown-arrow-container .close-arrow {
+  transform: inherit;
 }
 .dropdown .dropdown-content {
   background-color: #F6F6F6;
@@ -419,6 +423,79 @@ body {
 
 .dropdown-sm {
   width: 45%;
+}
+
+.gallery {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+}
+@media (max-width: 700px) {
+  .gallery {
+    height: 25vh;
+  }
+}
+@media (max-width: 700px) {
+  .gallery {
+    height: 20vh;
+  }
+}
+.gallery .gallery-icon-container {
+  position: absolute;
+  top: 40%;
+  bottom: 40%;
+  left: 2.5%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+}
+.gallery .gallery-icon-container__next {
+  right: 2.5%;
+  left: inherit;
+}
+.gallery .gallery-icon-container:hover {
+  cursor: pointer;
+}
+.gallery .gallery-icon-container .gallery-next-icon {
+  width: 48px;
+  height: 80px;
+  transform: rotate(180deg);
+}
+@media (max-width: 700px) {
+  .gallery .gallery-icon-container .gallery-next-icon {
+    border-radius: 10px;
+    width: 10px;
+    height: 20px;
+  }
+}
+.gallery .gallery-icon-container .gallery-next-icon path {
+  fill: #FFFFFF;
+}
+.gallery .gallery-icon-container .gallery-prev-icon {
+  width: 48px;
+  height: 80px;
+}
+@media (max-width: 700px) {
+  .gallery .gallery-icon-container .gallery-prev-icon {
+    border-radius: 10px;
+    width: 10px;
+    height: 20px;
+  }
+}
+.gallery .gallery-icon-container .gallery-prev-icon path {
+  fill: #FFFFFF;
+}
+.gallery .gallery-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 25px;
+}
+@media (max-width: 700px) {
+  .gallery .gallery-image {
+    border-radius: 10px;
+  }
 }
 
 .logo-red path {
