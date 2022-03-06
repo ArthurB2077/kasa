@@ -1,0 +1,71 @@
+.dropdown {
+    margin-top: $space-between-components;
+    .dropdown-header {
+        background-color: $primary-color;
+        border-radius: $border-radius-xs;
+        padding: 10px 20px 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: 600px) {
+            padding: 5px 10px 5px 10px;
+        };
+        .dropdown-title {
+            font-size: $font-size-md;
+            font-weight: $font-weight-lg;
+            color: $secondary-color;
+            margin: 0;
+            @media (max-width: 600px) {
+                font-size: $font-size-xs;
+            };
+        };
+        .dropdown-arrow-container {
+            padding: 5px;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @media (max-width: 600px) {
+                width: 20px;
+                height: 20px;
+            };
+            &:hover {
+                cursor: pointer;
+            };
+            .dropdown-arrow {
+                width: $dropdown-icon-width-md;
+                height: $dropdown-icon-height-md;
+                @media (max-width: 600px) {
+                    width: $dropdown-icon-width-xs;
+                    height: $dropdown-icon-height-xs;
+                };
+                path {
+                    fill: $secondary-color;
+                }
+            };
+        };
+    };
+    .dropdown-content {
+        background-color: $secondary-bg-color;
+        border-bottom-left-radius: $border-radius-xs;
+        border-bottom-right-radius: $border-radius-xs;
+        font-size: $font-size-md;
+        font-weight: $font-weight-md;
+        color: $primary-color;
+        padding: 35px 20px 20px 20px;
+        ul {
+            list-style: none;
+            li {
+                list-style: none;
+            };
+        };
+        @media (max-width: 600px) {
+            font-size: $font-size-xs;
+        };
+    }
+};
+
+.dropdown-sm {
+    width: 45%;
+}

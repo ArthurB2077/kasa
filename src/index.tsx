@@ -9,6 +9,7 @@ import Description from './components/Description';
 import HomeBanner from './assets/home-banner.png';
 import './style/main.css';
 import Loader from './layout/Loader';
+import Dropdown from './components/Dropdown';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -16,6 +17,7 @@ ReactDOM.render(
       <Loader>
         <Header/>
         <Banner title="Chez vous, partout et ailleurs" image={HomeBanner}/>
+        <Dropdown></Dropdown>
         <Routes>
           <Route path='/' element={<CardContainer/>}></Route>
           <Route path='/housing/:id' element={<Description />}></Route>
