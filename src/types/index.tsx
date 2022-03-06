@@ -8,14 +8,14 @@ export interface Housing {
         "name": string,
         "picture": string
     },
-    "rating": string | number,
+    "rating": string,
     "location": string,
     "equipments": string[],
     "tags": string[]
 };
 
 export interface ApiResponse {
-    housings?: Housing[],
-    error?: Array<{message: string}> | unknown,
+    housings: Housing[] | [],
+    error: Array<{message: string}> | unknown,
     loading: boolean
 };

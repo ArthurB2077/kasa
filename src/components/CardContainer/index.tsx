@@ -1,15 +1,15 @@
 import { useContext } from 'react';
 import { HousingContext } from '../../utils/context';
-import { Housing } from '../../types';
+import { ApiResponse } from '../../types';
 import Card from '../Card';
 
 const CardContainer = (): JSX.Element => {
-    const lodgings: Housing[] | [] | undefined = useContext(HousingContext);
+    const lodgingsResponse: ApiResponse | null = useContext(HousingContext);
 
     return(
         <main className="card-container">
-            {lodgings && lodgings.length !== 0 &&
-                lodgings.map(ldg => <Card id={ldg.id} title={ldg.title} image={ldg.cover} key={ldg.id}/>)
+            {lodgingsResponse && lodgingsResponse.housings.length !== 0 &&
+                lodgingsResponse.housings.map(ldg => <Card id={ldg.id} title={ldg.title} image={ldg.cover} key={ldg.id}/>)
             }
         </main>
     );

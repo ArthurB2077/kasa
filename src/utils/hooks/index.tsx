@@ -10,7 +10,7 @@ export const useFetchHousing = (): ApiResponse => {
         (async (): Promise<void> => {
             try {
                 setLoading(true);
-                const response: Response = await fetch("./logements.json", {
+                const response: Response = await fetch("http://localhost:3000/logements.json", {
                     headers : { 
                       'Content-Type': 'application/json',
                       'Accept': 'application/json'
