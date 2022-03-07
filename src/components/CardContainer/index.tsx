@@ -1,15 +1,17 @@
-import { useContext } from 'react';
-import { HousingContext } from '../../utils/context';
+
 import { ApiResponse } from '../../types';
 import Card from '../Card';
 
-const CardContainer = (): JSX.Element => {
-    const lodgingsResponse: ApiResponse | null = useContext(HousingContext);
+interface Props {
+    lodging: ApiResponse | null,
+}
+
+const CardContainer = (props: Props): JSX.Element => {
 
     return(
         <main className="card-container">
-            {lodgingsResponse && lodgingsResponse.housings.length !== 0 &&
-                lodgingsResponse.housings.map(ldg => <Card id={ldg.id} title={ldg.title} image={ldg.cover} key={ldg.id}/>)
+            {props.lodging && props.lodging.housings.length !== 0 &&
+                props.lodging.housings.map(hsg => <Card id={hsg.id} title={hsg.title} image={hsg.cover} key={hsg.id}/>)
             }
         </main>
     );
