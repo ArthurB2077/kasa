@@ -1,0 +1,10 @@
+.housing-container-dropdowns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $space-between-components;
+    @media (max-width: 1350px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

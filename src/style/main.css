@@ -2,7 +2,7 @@
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  margin: 4vh 10vw 0 10vw;
+  margin: 4vh 6vw 0 6vw;
 }
 
 .header {
@@ -212,6 +212,7 @@ html .footer h5 {
 .description-container {
   display: flex;
   justify-content: space-between;
+  margin-top: 3vh;
 }
 @media (max-width: 1100px) {
   .description-container {
@@ -372,6 +373,7 @@ html .footer h5 {
 @media (max-width: 600px) {
   .dropdown .dropdown-header {
     padding: 5px 10px 5px 10px;
+    font-size: 14px;
   }
 }
 .dropdown .dropdown-header .dropdown-title {
@@ -426,28 +428,44 @@ html .footer h5 {
   font-size: 24px;
   font-weight: 400;
   color: #FF6060;
-  padding: 35px 20px 20px 20px;
-}
-.dropdown .dropdown-content ul {
-  list-style: none;
-}
-.dropdown .dropdown-content ul li {
-  list-style: none;
+  padding-top: 20px;
 }
 @media (max-width: 600px) {
   .dropdown .dropdown-content {
-    font-size: 14px;
+    font-size: 12px;
   }
+}
+.dropdown .dropdown-content .dropdown-description {
+  padding: 0px 25px 60px 25px;
+}
+.dropdown .dropdown-content .dropdown-list {
+  list-style: none;
+  padding: 0px 25px 45px 25px;
+}
+.dropdown .dropdown-content .dropdown-list li {
+  list-style: none;
+  margin-top: 15px;
 }
 
 .dropdown-sm {
   width: 45%;
+}
+@media (max-width: 1350px) {
+  .dropdown-sm {
+    width: 80%;
+  }
+}
+@media (max-width: 700px) {
+  .dropdown-sm {
+    width: 100%;
+  }
 }
 
 .gallery {
   position: relative;
   width: 100%;
   height: 50vh;
+  margin-top: 3vh;
 }
 @media (max-width: 700px) {
   .gallery {
@@ -514,6 +532,19 @@ html .footer h5 {
 @media (max-width: 700px) {
   .gallery .gallery-image {
     border-radius: 10px;
+  }
+}
+
+.housing-container-dropdowns {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5vh;
+}
+@media (max-width: 1350px) {
+  .housing-container-dropdowns {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 

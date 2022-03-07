@@ -5,6 +5,7 @@ import Header from './layout/Header';
 import Footer from './layout/Footer';
 import Loader from './layout/Loader';
 import Home from './pages/Home';
+import HousingSheet from './pages/HousingSheet';
 import './style/main.css';
 
 ReactDOM.render(
@@ -14,7 +15,7 @@ ReactDOM.render(
         <Header/>
         <Routes>
           <Route path='/' element={<Home/>}></Route>
-          <Route path='/housing/:id' element={<h1>Housings</h1>}></Route>
+          <Route path='/housing/:id' element={<HousingSheet/>}></Route>
           <Route path='/about' element={<h1>About</h1>}></Route>
           <Route path='*' element={<h1>404 not found</h1>}></Route>
         </Routes>
