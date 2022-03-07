@@ -3,6 +3,7 @@ import { Navigate, useParams } from 'react-router-dom';
 import { Params } from 'react-router-dom';
 import { HousingContext } from '../../utils/context';
 import { Housing, ApiResponse } from '../../types';
+import text from '../../assets/text';
 import Description from "../../components/Description";
 import Dropdown from "../../components/Dropdown";
 import Gallery from "../../components/Gallery";
@@ -37,8 +38,8 @@ const HousingSheet = () => {
                                 <Gallery lodging={matchingLodging}/>
                                 <Description lodging={matchingLodging}/>
                                 <div className="housing-container-dropdowns">
-                                    <Dropdown content={matchingLodging.description}/>
-                                    <Dropdown content={matchingLodging.equipments}/>
+                                    <Dropdown title={text.dropdownDescription} content={matchingLodging.description} size='sm'/>
+                                    <Dropdown title={text.dropdownDescription} content={matchingLodging.equipments} size='sm'/>
                                 </div>
                             </>
                         }   

@@ -548,6 +548,10 @@ html .footer h5 {
   }
 }
 
+.about-dropdown-container {
+  margin-bottom: 5vh;
+}
+
 .logo-red path {
   fill: #FF6060;
 }
