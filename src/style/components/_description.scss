@@ -1,6 +1,7 @@
 .description-container {
     display: flex;
     justify-content: space-between;
+    margin-top: $space-between-components-sm;
     @media (max-width: 1100px) {
         flex-direction: column;
     }
