@@ -552,6 +552,49 @@ html .footer h5 {
   margin-bottom: 5vh;
 }
 
+.not-found-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.not-found-container .not-found-title {
+  color: #FF6060;
+  font-size: 288px;
+  font-weight: bold;
+  margin: 4vh 0 0 0;
+}
+@media (max-width: 1100px) {
+  .not-found-container .not-found-title {
+    font-size: 96px;
+  }
+}
+.not-found-container .not-found-sub-title {
+  color: #FF6060;
+  font-size: 36px;
+  font-weight: 500;
+  margin-top: 1vh;
+}
+@media (max-width: 1100px) {
+  .not-found-container .not-found-sub-title {
+    font-size: 18px;
+    text-align: center;
+    width: 80%;
+  }
+}
+.not-found-container .not-found-back-link {
+  color: #FF6060;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 14vh;
+  margin-bottom: 8vh;
+}
+@media (max-width: 1100px) {
+  .not-found-container .not-found-back-link {
+    font-size: 14px;
+  }
+}
+
 .logo-red path {
   fill: #FF6060;
 }
