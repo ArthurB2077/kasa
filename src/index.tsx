@@ -6,8 +6,10 @@ import Footer from './layout/Footer';
 import Loader from './layout/Loader';
 import Home from './pages/Home';
 import HousingSheet from './pages/HousingSheet';
-import './style/main.css';
 import About from './pages/About';
+import NotFound from './pages/NotFound';
+import './style/main.css';
+
 
 ReactDOM.render(
   <BrowserRouter>
@@ -18,7 +20,7 @@ ReactDOM.render(
           <Route path='/' element={<Home/>}></Route>
           <Route path='/housing/:id' element={<HousingSheet/>}></Route>
           <Route path='/about' element={<About/>}></Route>
-          <Route path='*' element={<h1>404 not found</h1>}></Route>
+          <Route path='*' element={<NotFound/>}></Route>
         </Routes>
         <Footer/>
       </Loader>
