@@ -6,7 +6,7 @@ The content is fully responsive.
 Using typescript was my initiative as a developpement dependency.
 
 
-# Getting Started with Create React App
+## Created with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
