@@ -1,19 +1,15 @@
-import React, { useContext } from 'react';
-import { ApiResponse } from '../../types';
-import { HousingContext } from '../../utils/context';
+import React from 'react';
 
 interface Props {
     children : React.ReactNode,
+    shouldLoad: boolean
 };
 
-const Loader = ({ children }: Props): JSX.Element => {
-    const lodgingsResponse: ApiResponse | null = useContext(HousingContext);
-    const isLoading = lodgingsResponse?.loading;
-
+const Loader = ({ children, shouldLoad }: Props): JSX.Element => {
 
     return (
         <>
-            {isLoading === undefined || isLoading ? 
+            {shouldLoad ? 
                 (<div className="loader-ring">
                     <div></div>
                     <div></div>
