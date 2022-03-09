@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
-import { useLocation } from "react-router";
+import { Link, useLocation } from "react-router-dom";
+import { Location } from 'react-router-dom';
 import text from "./../../assets/text";
 
 const Header = (): JSX.Element => {
-    const { pathname } = useLocation();
+    const { pathname, state }: Location = useLocation();
 
     return (
         <header className="header">
@@ -17,7 +17,7 @@ const Header = (): JSX.Element => {
                 </svg>
             </h1>
             <nav className="navigation">
-                <Link className={`nav-link ${pathname === '/' ? 'active' : ''}`} to="/">{text.navigationTitle1}</Link>
+                <Link className={`nav-link ${pathname === '/' ? 'active' : ''}`} to="/" state={state}>{text.navigationTitle1}</Link>
                 <Link className={`nav-link ${pathname === '/about' ? 'active' : ''}`} to="/about">{text.navigationTitle2}</Link>
             </nav>
         </header>
