@@ -29,6 +29,9 @@
             font-weight: $font-weight-lg;
             text-decoration: none;
             @media (max-width: 600px) {
+                font-size: $font-size-sm;
+            };
+            @media (max-width: 400px) {
                 font-size: $font-size-xxs;
             };
         };

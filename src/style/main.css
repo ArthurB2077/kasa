@@ -42,6 +42,11 @@ body {
 }
 @media (max-width: 600px) {
   .header .navigation .nav-link {
+    font-size: 18px;
+  }
+}
+@media (max-width: 400px) {
+  .header .navigation .nav-link {
     font-size: 12px;
   }
 }
@@ -259,6 +264,8 @@ html .footer h5 {
   font-size: 14px;
   font-weight: 500;
   margin-right: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 @media (max-width: 525px) {
   .description-container .description-content-left .description-tags .description-tag {
