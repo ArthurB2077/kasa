@@ -20,15 +20,9 @@ const HousingSheet = () => {
     useEffect((): void => {
         if(lodgingsResponse !== null && lodgingsResponse.housings.length > 0) {
             const match : Housing | undefined = lodgingsResponse.housings.find((hsg) => hsg.id === params.id);
-            if (match) {
-                setMatchingLodging(match);
-            } else {
-                setMatchingLodging(undefined);
-            };
-            if(lodgingsResponse) {
-                const { loading } = lodgingsResponse;
-                setIsLoading(loading);
-            };
+            setMatchingLodging(match);
+            const { loading } = lodgingsResponse;
+            setIsLoading(loading);
         };
     }, [lodgingsResponse, params]);
     
