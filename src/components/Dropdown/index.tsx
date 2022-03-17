@@ -22,7 +22,7 @@ const Dropdown = (props: Props) => {
             {open && 
                 <div className='dropdown-content'>
                     {Array.isArray(props.content) ?
-                        (<ul className='dropdown-list'> {props.content.map(eqm => <li>{eqm}</li>)}</ul>)
+                        (<ul className='dropdown-list'> {props.content.map((eqm, index) => <li key={`eqp${index}`}>{eqm}</li>)}</ul>)
                         :
                         (<p className='dropdown-description'>{props.content}</p>)
                     }

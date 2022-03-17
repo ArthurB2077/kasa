@@ -5,7 +5,7 @@ interface Props {
     id: string,
     title: string,
     image: string,
-    isLastView?: unknown
+    lastView?: unknown
 }
 
 const Card = (props: Props): JSX.Element => {
@@ -19,7 +19,7 @@ const Card = (props: Props): JSX.Element => {
 
     return(
         <Link to={`/housing/${props.id}`} state={props.id}>
-            {props.isLastView === props.id ? 
+            {props.lastView === props.id ? 
                 (
                     <article ref={lastViewRef} className="card">
                         <h3 className="card-title">{props.title}</h3>

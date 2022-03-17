@@ -11,7 +11,6 @@ import Footer from './../../layout/Footer';
 import Loader from './../../layout/Loader';
 import text from './../../assets/text';
 
-
 const Home = (): JSX.Element => {
     const lodgingResponse: ApiResponse | null = useContext(HousingContext);
     let { state }: Location = useLocation();
