@@ -1,8 +1,17 @@
 # Kasa
-In this project, I created interface for a lodgings lend company. The site is made of 4 pages: a homepage, about page, lodging sheet page and a not found page.
-You can see the sketch here : https://www.figma.com/file/bAnXDNqRKCRRP8mY2gcb5p/UI-Design-Kasa-FR?node-id=4%3A2
+[![forthebadge](https://forthebadge.com/images/badges/made-with-typescript.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/uses-js.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com) [![forthebadge](https://forthebadge.com/images/badges/powered-by-electricity.svg)](https://forthebadge.com)
+
+In this project, I created interface for a lodgings lend company
+
+The site is made of 4 pages: a homepage, about page, lodging sheet page and a not found page
+
+You can see the sketch here: \
+https://www.figma.com/file/bAnXDNqRKCRRP8mY2gcb5p/UI-Design-Kasa-FR?node-id=4%3A2
+
 This app use React, React router, Sass, Typescript and docker. 
+
 The content is fully responsive. 
+
 Using typescript was my initiative as a developpement dependency.
 
 
@@ -10,35 +19,45 @@ Using typescript was my initiative as a developpement dependency.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Install the project
+## Set and start the project:
 
-### ` git clone`
-First you need to download the repository with : git clone https://github.com/ArthurB2077/arthurbequie_11_02032022.git 
+### Clone the project:
+```bash
+git clone https://github.com/ArthurB2077/arthurbequie_11_02032022.git
+```
 
-### `yarn install`
-Then run at project root the packages installation. You should see a new node_modules directory after this command.
+### Install dependencies:
+```bash
+yarn install
+```
 
-### `docker-compose up --build`
-The app run in a docker container. So my advise is to not use yarn start but: docker-compose up --build
+### Buiild the client:
+```bash
+docker-compose up --build
+```
+
 After that, you can go to the adress on your loca machine: http://localhost/3000 and you're up !
 
-### `docker-compose up`
-If you just stopped the container and you need to re-run it just make this command
+### Up the container:
+```bash
+docker-compose up
+```
 
-### `docker-compose down -v`
-If you need to removes the volumes run this command
+### Stop the container:
+```bash
+docker-compose stop
+```
 
-### `docker stop $(docker ps -a -q)`
-If you need to stop all running containers
+### Remove the container:
+```bash
+docker-compose down -v
+```
 
-### `docker stop docker rm $(docker ps -a -q)`
-If you need to delete all stopped containers
-
-# Project stage
+## Project stage
 The project is done and ready for deployement
 
-# Make with 
+## Make with
 Visual Studio Code
 
-# Use
+## Using
 React.js, Typescript, Javascript, Sass, Css, HTML, Docker
