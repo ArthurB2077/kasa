@@ -1,4 +1,4 @@
-# Project 11 of my Frontend trainig at Openclassrooms
+# Kasa
 In this project, I created interface for a lodgings lend company. The site is made of 4 pages: a homepage, about page, lodging sheet page and a not found page.
 You can see the sketch here : https://www.figma.com/file/bAnXDNqRKCRRP8mY2gcb5p/UI-Design-Kasa-FR?node-id=4%3A2
 This app use React, React router, Sass, Typescript and docker. 
